@@ -1,0 +1,33 @@
+<mat-toolbar color="primary" style="width: 100%;">
+  <mat-toolbar-row fxHide.lt-sm>
+    <p class="title">Git Lookup</p>
+    <div class="search-form-container">
+      <form class="search-form">
+        <mat-form-field class="search-field">
+          <input
+            matInput
+            placeholder="Search a repository"
+            [formControl]="searchForm"
+          />
+      
+       
+        </mat-form-field>
+        <mat-radio-group aria-label="">
+          <mat-radio-button value="language"  [formControl]="filterForm">By Language</mat-radio-button>
+          <mat-radio-button value="topic" [formControl]="filterForm">By Topic</mat-radio-button>
+        </mat-radio-group>
+        <button
+          mat-raised-button
+          color="accent"
+          class="search-button"
+          (click)="startSearch()"
+        >
+          Search
+        </button>
+      </form>
+    </div>
+    <span class="spacer"></span>
+   
+  </mat-toolbar-row>
+ 
+</mat-toolbar>
